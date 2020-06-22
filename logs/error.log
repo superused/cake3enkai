@@ -1,0 +1,59 @@
+2020-06-22 21:00:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
+Exception Attributes: array (
+  'class' => 'Login',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /login
+Stack Trace:
+#0 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(92): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 /var/www/cake/cake3enkai/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2020-06-22 21:00:46 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /
+Stack Trace:
+#0 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(172): PDOStatement->execute(NULL)
+#1 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(172): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Database/Statement/BufferedStatement.php(75): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Database/Statement/SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Database/Connection.php(276): Cake\Database\Statement\SqliteStatement->execute()
+#5 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Database/Query.php(190): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/ORM/Table.php(1669): Cake\Database\Query->execute()
+#7 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/ORM/Table.php(1563): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#8 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/ORM/Table.php(1491): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#9 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Database/Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/ORM/Table.php(1492): Cake\Database\Connection->transactional(Object(Closure))
+#11 /var/www/cake/cake3enkai/vendor/cakephp/debug_kit/src/ToolbarService.php(200): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#12 /var/www/cake/cake3enkai/vendor/cakephp/debug_kit/src/Routing/Filter/DebugBarFilter.php(139): DebugKit\ToolbarService->saveData(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Event/EventManager.php(426): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(100): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#17 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 /var/www/cake/cake3enkai/vendor/cakephp/cakephp/src/Http/Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#27 /var/www/cake/cake3enkai/webroot/index.php(37): Cake\Http\Server->run()
+#28 {main}
+
+
