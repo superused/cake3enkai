@@ -34,22 +34,22 @@ class UsersTable extends Table
 	public function validationDefault(Validator $validator)
 	{
 		$validator
-		    ->integer('id')
-		    ->allowEmpty('id', 'create');
+			->integer('id')
+			->allowEmpty('id', 'create');
 		
 		$validator
-		    ->email('email')
-		    ->requirePresence('email', 'create')
-		    ->notEmpty('email')
-		    ->add('email', 'unique', [
-		    		'rule' => 'validateUnique',
-		    		'provider' => 'table',
-		    		'message' => '登録できません'
-		    ]);
+			->email('email')
+			->requirePresence('email', 'create')
+			->notEmpty('email')
+			->add('email', 'unique', [
+					'rule' => 'validateUnique',
+					'provider' => 'table',
+					'message' => '登録できません'
+			]);
 		    
 		$validator
-		    ->requirePresence('password', 'create')
-		    ->notEmpty('password');
+			->requirePresence('password', 'create')
+			->notEmpty('password');
 		
 		return $validator;
 	}
