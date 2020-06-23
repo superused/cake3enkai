@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+body {
+	padding-top: 50px;
+}
+
+.main {
+	padding: 20px 40px ;
+	background-color: #fff;
+}
+
+.main .page-header {
+	margin-top: 0;
+}
+
+.box1 {
+	float: right;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    width: 300px;
+    color: white;
+    background-color: #00CC00;
+    border: solid 3px #00CC00;
+}
+
+.box2 {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    width: 300px;
+    background-color: #DDDDDD;
+    border: solid 3px #DDDDDD;
+}
+
+.clear {
+    clear:both;
+}
+
+table.now {
+  border: 1px solid #ccc;
+  border-collapse: separate;
+  border-radius: 5px;
+  border-spacing: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+table.now th, table.now td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+}
+table.now th {
+  border-right: 1px solid #ccc;
+  background: #337ab7;
+  color: white;
+}
+table.now tr:first-child th {
+  border-radius: 5px 0 0 0;
+}
+table.now tr:first-child td {
+  border-radius: 0 5px 0 0;
+}
+table.now tr:last-child th {
+  border-bottom: none;
+  border-radius: 0 0 0 5px;
+}
+table.now tr:last-child td {
+  border-bottom: none;
+  border-radius: 0 0 5px 0;
+}
