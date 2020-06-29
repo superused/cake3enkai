@@ -56,6 +56,9 @@ class ErrorController extends AppController
         $this->viewBuilder()->templatePath('Error');
     }
 
+
+
+
     /**
      * afterFilter callback.
      *
@@ -64,6 +67,6 @@ class ErrorController extends AppController
      */
     public function afterFilter(Event $event)
     {
-        echo 'test';
+        echo 'testtest';
     }
 }
