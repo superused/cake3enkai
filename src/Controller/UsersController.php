@@ -50,6 +50,8 @@ class UsersController extends AppController
 		}
 		// ユーザ作成画面を表示
 		$this->set(compact('user'));
+		
+		$sato = "sato";
 	}
 	
 }
