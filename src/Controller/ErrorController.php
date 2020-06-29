@@ -56,6 +56,9 @@ class ErrorController extends AppController
         $this->viewBuilder()->templatePath('Error');
     }
 
+
+
+
     /**
      * afterFilter callback.
      *
