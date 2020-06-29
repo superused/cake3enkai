@@ -64,6 +64,6 @@ class ErrorController extends AppController
      */
     public function afterFilter(Event $event)
     {
-        echo 'test';
+        echo 'testtest';
     }
 }
