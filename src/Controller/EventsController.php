@@ -17,15 +17,15 @@ class EventsController extends AppController
 
 		$this->set(compact('events'));
 	}
-	
+
 
 	public function view($id = null)
 	{
 		$event = $this->Events->get($id, [
 				'contain' => ['EventUsers','Categories','Users']
 		]);
-		
+
 		$this->set('event', $event);
 	}
-	
+
 }
